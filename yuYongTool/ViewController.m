@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+#import "WWViewController.h"
+
+
+
 @interface ViewController ()
 
 @end
@@ -16,9 +20,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    
+    UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    
+    btn.backgroundColor = [UIColor cyanColor];
+    
+    [btn addTarget:self action:@selector(actionAction) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.view addSubview:btn];
 }
 
+- (void) actionAction{
+
+    
+    WWViewController * wwVC = [[WWViewController alloc] init];
+    
+//    PhotoSelectViewController * photoVC = [[PhotoSelectViewController alloc] init];
+    UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:wwVC];
+    
+    [self presentViewController:navi animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

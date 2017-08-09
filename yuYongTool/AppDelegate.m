@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "IQKeyboardManager.h"
+#import "WWViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    
+    
+    
+    WWViewController * wwVC = [[WWViewController alloc] init];
+    
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:wwVC];
+//    PhotoSelectViewController * photoVC = [[PhotoSelectViewController alloc] init];
+//
+//    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:photoVC];
+//    
+    self.window.rootViewController = nav;
     return YES;
 }
 
