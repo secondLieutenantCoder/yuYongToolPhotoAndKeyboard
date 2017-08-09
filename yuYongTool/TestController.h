@@ -12,4 +12,7 @@
 
 @interface TestController : UIViewController
 
+/** 属性 */
+@property (nonatomic,strong) NSArray * dataSource;
+
 @end
